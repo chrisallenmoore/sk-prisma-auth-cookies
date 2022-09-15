@@ -14,19 +14,19 @@ export const load: PageServerLoad = async ({ locals }) => {
 export const actions: Actions = {
 	default: async ({ request, cookies }) => {
 		const data = await request.formData()
-		const username = data.get('username')
+		const email = data.get('email')
 		const password = data.get('password')
 
 		if (
-			typeof username !== 'string' ||
+			typeof email !== 'string' ||
 			typeof password !== 'string' ||
-			!username ||
+			!email ||
 			!password
 		) {
 			return invalid(400, { invalid: true })
 		}
 
-		const user = await db.user.findUnique({ where: { username } })
+		const user = await db.user.findUnique({ where: { email } })
 
 		if (!user) {
 			return invalid(400, { credentials: true })

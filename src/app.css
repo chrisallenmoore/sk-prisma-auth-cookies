@@ -14,3 +14,7 @@
 .section-py {
 	@apply py-10;
 }
+
+.error {
+	@apply text-indigo-600;
+}

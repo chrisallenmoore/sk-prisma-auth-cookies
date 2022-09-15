@@ -3,7 +3,7 @@
 </script>
 
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-white">
+<header class="relative bg-white">
 	<div class="flex items-center justify-between page-px header-py md:justify-start md:space-x-10">
 		<div class="flex justify-start lg:w-0 lg:flex-1">
 			<a href="/">
@@ -270,17 +270,6 @@
 					<a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Pricing</a>
 
 					<a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Docs</a>
-
-					<a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Enterprise</a>
-
-					<a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Help Center</a
-					>
-
-					<a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Guides</a>
-
-					<a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Events</a>
-
-					<a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Security</a>
 				</div>
 				{#if !$page.data.user}
 					<div class="mt-6">
@@ -310,4 +299,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</header>

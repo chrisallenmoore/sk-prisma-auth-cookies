@@ -10,6 +10,6 @@
 
 <AppHeader />
 
-<main>
+<main class="grow">
 	<slot />
 </main>
