@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global Styles */
+.page-px {
+	@apply px-4 sm:px-6;
+}
+
+.header-py {
+	@apply py-6;
+}
+
+.section-py {
+	@apply py-10;
+}

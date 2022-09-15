@@ -7,7 +7,7 @@ import { db } from '$lib/database'
 export const load: PageServerLoad = async ({ locals }) => {
 	// redirect to `/` if logged in
 	if (locals.user) {
-		throw redirect(302, '/')
+		throw redirect(302, '/account')
 	}
 }
 

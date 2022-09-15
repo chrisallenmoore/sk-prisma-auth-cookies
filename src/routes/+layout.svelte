@@ -10,4 +10,6 @@
 
 <AppHeader />
 
-<slot />
+<main>
+	<slot />
+</main>
