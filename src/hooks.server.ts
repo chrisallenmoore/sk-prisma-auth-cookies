@@ -1,45 +1,45 @@
-import type { Handle } from '@sveltejs/kit'
-import { db } from '$lib/database'
+import type { Handle } from '@sveltejs/kit';
+import { db } from '$lib/database';
 
 // custom redirect
 function redirect(location: string) {
 	return new Response(undefined, {
 		status: 303,
-		headers: { location },
-	})
+		headers: { location }
+	});
 }
 
 export const handle: Handle = async ({ event, resolve }) => {
 	// get cookies from browser
-	const session = event.cookies.get('session')
+	const session = event.cookies.get('session');
 
 	// if there is no session
 	if (!session) {
 		// redirect protected pages
-		if (event.url.pathname === '/account') {
-			return redirect('/')
+		if (event.url.pathname === '/account/') {
+			return redirect('/login/');
 		}
 
 		// or load page as normal
-		return await resolve(event)
+		return await resolve(event);
 	}
 
 	// find the user based on the session
 	const user = await db.user.findUnique({
 		where: { userAuthToken: session },
-		select: { username: true },
-	})
+		select: { username: true }
+	});
 
 	// if `user` exists set `events.local`
 	if (user) {
-		event.locals.user = user.username
+		event.locals.user = user.username;
 	} else {
 		// make sure nothing weird is going on
-		if (event.url.pathname === '/account') {
-			return redirect('/')
+		if (event.url.pathname === '/account/') {
+			return redirect('/login/');
 		}
 	}
 
 	// load page as normal
-	return await resolve(event)
-}
+	return await resolve(event);
+};

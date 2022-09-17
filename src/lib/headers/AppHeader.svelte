@@ -41,31 +41,32 @@
 			</button>
 		</div>
 		<nav class="hidden space-x-10 md:flex">
-			<a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+			<a href="/account/" class="text-base font-medium text-gray-500 hover:text-gray-900">Pricing</a
+			>
 			<a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Docs</a>
 		</nav>
 
 		<div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 			{#if !$page.data.user}
 				<a
-					href="/login"
+					href="/login/"
 					class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
 					>Sign in</a
 				>
 				<a
-					href="/register"
+					href="/register/"
 					class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
 					>Sign up</a
 				>
 			{/if}
 			{#if $page.data.user}
 				<a
-					href="/account"
+					href="/account/"
 					class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
 					>Account</a
 				>
 				<a
-					href="/logout"
+					href="/logout/"
 					class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-indigo-600 px-4 py-2 text-base font-medium text-indigo-600 shadow-sm hover:bg-indigo-700 hover:text-white"
 					>Logout</a
 				>
@@ -274,25 +275,25 @@
 				{#if !$page.data.user}
 					<div class="mt-6">
 						<a
-							href="/register"
+							href="/register/"
 							class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
 							>Sign up</a
 						>
 						<p class="mt-6 text-center text-base font-medium text-gray-500">
 							Existing customer?
-							<a href="/login" class="text-indigo-600 hover:text-indigo-500">Sign in</a>
+							<a href="/login/" class="text-indigo-600 hover:text-indigo-500">Sign in</a>
 						</p>
 					</div>
 				{/if}
 				{#if $page.data.user}
 					<div class="mt-6">
 						<a
-							href="/account"
+							href="/account/"
 							class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
 							>Account</a
 						>
 						<p class="mt-6 text-center text-base font-medium text-gray-500">
-							<a href="/logout" class="text-indigo-600 hover:text-indigo-500">Sign out</a>
+							<a href="/logout/" class="text-indigo-600 hover:text-indigo-500">Sign out</a>
 						</p>
 					</div>
 				{/if}
