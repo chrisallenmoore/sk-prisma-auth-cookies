@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import type { ActionData } from '../../../../.svelte-kit/types/src/routes/(auth)/register/$types';
+	import type { ActionData } from './$types';
 
 	export let form: ActionData;
 </script>
