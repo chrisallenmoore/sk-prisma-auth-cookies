@@ -16,7 +16,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	// if there is no session
 	if (!session) {
 		// redirect protected pages
-		if (event.url.pathname === '/admin') {
+		if (event.url.pathname === '/account') {
 			return redirect('/')
 		}
 
@@ -35,7 +35,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 		event.locals.user = user.username
 	} else {
 		// make sure nothing weird is going on
-		if (event.url.pathname === '/admin') {
+		if (event.url.pathname === '/account') {
 			return redirect('/')
 		}
 	}
