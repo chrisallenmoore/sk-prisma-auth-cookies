@@ -5,7 +5,7 @@ import type { Actions, PageServerLoad } from './$types';
 import { db } from '$lib/database';
 
 export const load: PageServerLoad = async ({ locals }) => {
-	// redirect to `/` if logged in
+	// redirect to `/` if signed in
 	if (locals.user) {
 		throw redirect(302, '/dashboard');
 	}
