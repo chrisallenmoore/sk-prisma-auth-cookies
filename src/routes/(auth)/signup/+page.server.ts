@@ -7,7 +7,7 @@ import { db } from '$lib/database';
 export const load: PageServerLoad = async ({ locals }) => {
 	// redirect to `/` if logged in
 	if (locals.user) {
-		throw redirect(302, '/');
+		throw redirect(302, '/dashboard');
 	}
 };
 
@@ -53,6 +53,6 @@ export const actions: Actions = {
 			}
 		});
 
-		throw redirect(303, '/login');
+		throw redirect(303, '/signin');
 	}
 };
