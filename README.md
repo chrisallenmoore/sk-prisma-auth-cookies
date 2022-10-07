@@ -1,22 +1,37 @@
-# create-svelte
+# SvelteKit & Prisma with Cookies auth
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a starter project for using SvelteKit with cookies auth.
 
-## Creating a project
+It has everything you need to have JWT authentication working with Prisma and SqlLite.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Tailwind CSS is also setup and is used for styling.
+
+_I got a lot of inspiration from https://joyofcode.xyz/sveltekit-authentication-using-cookies_
+
+## First, install npm Dependencies
+
+Here's how to make this project work!
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+# from the root directory
+npm install
+```
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## Next create your database from the Prisma schema
+
+```bash
+# from the root directory
+npx prisma db push
+```
+
+## Take a look at your awesome new database with Prisma Studio
+
+```bash
+# from the root directory
+npx prisma studio
 ```
 
 ## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -32,7 +47,3 @@ To create a production version of your app:
 ```bash
 npm run build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
