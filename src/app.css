@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 /* Global Styles */
-.page-px {
-	@apply px-4 sm:px-6;
+.body {
+	@apply text-gray-900;
 }
 
-.header-py {
-	@apply py-6;
+.page-px {
+	@apply px-4 sm:px-6;
 }
 
 .section-py {
@@ -16,5 +16,5 @@
 }
 
 .error {
-	@apply text-indigo-600;
+	@apply text-violet-600;
 }

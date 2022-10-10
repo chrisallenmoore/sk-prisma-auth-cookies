@@ -1,26 +1,18 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
+	import mark from '$lib/logos/mark-violet-600.svg';
 
 	export let form: ActionData;
 </script>
 
 <section class="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
 	<div class="sm:mx-auto sm:w-full sm:max-w-md">
-		<img
-			class="mx-auto h-12 w-auto"
-			src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-			alt="Your Company"
-		/>
+		<img class="mx-auto h-12 w-auto" src={mark} alt="Your Company" />
 		<h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
 			Sign up for an account
 		</h2>
-		<p class="mt-2 text-center text-sm text-gray-600">
-			Or
-			<a href="/signin" class="font-medium text-indigo-600 hover:text-indigo-500"
-				>sign in if you are already a member</a
-			>
-		</p>
+		<p class="mt-2 text-center text-sm text-gray-600">Get the world's best app</p>
 	</div>
 
 	<div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -77,7 +69,10 @@
 					</div>
 				</div>
 
-				<div class="flex items-center justify-between">
+				<!-- TODO: Add password confirmation -->
+
+				<!-- TODO: Integrate this remember me code? -->
+				<!-- <div class="flex items-center justify-between">
 					<div class="flex items-center">
 						<input
 							id="remember-me"
@@ -93,7 +88,7 @@
 							>Forgot your password?</a
 						>
 					</div>
-				</div>
+				</div> -->
 
 				<div>
 					<button
@@ -101,6 +96,11 @@
 						class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
 						>Sign up</button
 					>
+					<div class="text-sm mt-4">
+						<a href="/signin" class="font-medium text-violet-600 hover:text-violet-500"
+							>Already have an account?</a
+						>
+					</div>
 				</div>
 			</form>
 		</div>
