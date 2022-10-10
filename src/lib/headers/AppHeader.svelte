@@ -3,7 +3,7 @@
 	import mark from '$lib/logos/mark-violet-600.svg';
 </script>
 
-<header class="bg-white  shadow-md">
+<header class="bg-white shadow-md relative">
 	<nav class="mx-auto max-w-screen page-px" aria-label="Top">
 		<div
 			class="flex w-full items-center justify-between border-b border-violet-500 py-4 lg:border-none"
