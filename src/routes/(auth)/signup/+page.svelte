@@ -94,8 +94,6 @@
 					</div>
 				</div>
 
-				<!-- TODO: Add password confirmation -->
-
 				<!-- TODO: Integrate this remember me code? -->
 				<!-- <div class="flex items-center justify-between">
 					<div class="flex items-center">
