@@ -1,15 +1,18 @@
 <script>
-	import { page } from '$app/stores';
-	import AppHeader from '$lib/headers/AppHeader.svelte';
 	import '../app.css';
+	import { page } from '$app/stores';
+	import Header from '$lib/headers/Header.svelte';
+	import Footer from '$lib/footers/Footer.svelte';
 </script>
 
 <svelte:head>
 	<title>SvelteKit, Prisma, Auth Cookies</title>
 </svelte:head>
 
-<AppHeader />
+<Header />
 
-<main class="grow">
+<main>
 	<slot />
 </main>
+
+<Footer />
