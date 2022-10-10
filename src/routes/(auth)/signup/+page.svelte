@@ -35,7 +35,7 @@
 							type="email"
 							autocomplete="email"
 							required
-							class="block w-full appearance-none rounded-md border border-zinc-300 px-3 py-2 placeholder-zinc-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+							class="block w-full appearance-none rounded-md border border-zinc-300 px-3 py-2 placeholder-zinc-400 shadow-sm focus:border-violet-500 focus:outline-none focus:ring-violet-500 sm:text-sm"
 						/>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 							name="username"
 							type="text"
 							required
-							class="block w-full appearance-none rounded-md border border-zinc-300 px-3 py-2 placeholder-zinc-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+							class="block w-full appearance-none rounded-md border border-zinc-300 px-3 py-2 placeholder-zinc-400 shadow-sm focus:border-violet-500 focus:outline-none focus:ring-violet-500 sm:text-sm"
 						/>
 					</div>
 				</div>
@@ -69,7 +69,27 @@
 							type="password"
 							autocomplete="current-password"
 							required
-							class="block w-full appearance-none rounded-md border border-zinc-300 px-3 py-2 placeholder-zinc-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+							class="block w-full appearance-none rounded-md border border-zinc-300 px-3 py-2 placeholder-zinc-400 shadow-sm focus:border-violet-500 focus:outline-none focus:ring-violet-500 sm:text-sm"
+						/>
+					</div>
+				</div>
+
+				<div>
+					{#if form?.passwordConfirm}
+						<p class="error">Password doesn't match.</p>
+					{/if}
+
+					<label for="password-confirm" class="block text-sm font-medium text-gray-700">
+						Confirm Password</label
+					>
+					<div class="mt-1">
+						<input
+							id="password-confirm"
+							name="password-confirm"
+							type="password"
+							autocomplete="current-password"
+							required
+							class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-accent-500 focus:outline-none focus:ring-accent-500 sm:text-sm"
 						/>
 					</div>
 				</div>
@@ -83,13 +103,13 @@
 							id="remember-me"
 							name="remember-me"
 							type="checkbox"
-							class="h-4 w-4 rounded border-zinc-300 text-indigo-600 focus:ring-indigo-500"
+							class="h-4 w-4 rounded border-zinc-300 text-violet-600 focus:ring-violet-500"
 						/>
 						<label for="remember-me" class="ml-2 block text-sm text-zinc-900">Remember me</label>
 					</div>
 
 					<div class="text-sm">
-						<a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"
+						<a href="#" class="font-medium text-violet-600 hover:text-violet-500"
 							>Forgot your password?</a
 						>
 					</div>
@@ -98,7 +118,7 @@
 				<div>
 					<button
 						type="submit"
-						class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+						class="flex w-full justify-center rounded-md border border-transparent bg-violet-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"
 						>Sign up</button
 					>
 				</div>

@@ -17,6 +17,7 @@ export const actions: Actions = {
 		const username = data.get('username');
 		const email = data.get('email');
 		const password = data.get('password');
+		const password_confirm = data.get('password-confirm');
 
 		if (
 			typeof username !== 'string' ||
@@ -43,6 +44,10 @@ export const actions: Actions = {
 
 		if (emailUser) {
 			return invalid(400, { emailUser: true });
+		}
+
+		if (password !== password_confirm) {
+			return invalid(400, { passwordConfirm: true });
 		}
 
 		await db.user.create({
